@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import fetchMovies from "services/fetchMovies";
 
@@ -16,12 +16,10 @@ function Home() {
 
       const getMovies = await fetchMovies(currentRequestUrl);
       setMovies(getMovies.data.results);
-      console.log("fetchPopularMovies >> getMovies:::", getMovies);
     }
     fetchPopularMovies();
   }, []);
 
-  console.log("Home >> movies:::", movies);
   return (
     <>
       <h1>Home</h1>
@@ -40,17 +38,23 @@ function Home() {
               <p>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`}
-                  alt={original_title}
+                  alt={`Poster of ${original_title} movie`}
                 />
               </p>
               <p>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-                  alt={original_title}
+                  alt={`Poster of ${original_title} movie`}
                 />
               </p>
               <p>Language: {original_language}</p>
-              <p>Title: {original_title}</p>
+              <p>
+                Title:{" "}
+                <Link to={`movies/${id}`} state={{ from: location }}>
+                  {" "}
+                  {original_title}
+                </Link>
+              </p>
               <p>Release date: {release_date}</p>
               <p>TMDB rating: {vote_average},</p>
             </li>
