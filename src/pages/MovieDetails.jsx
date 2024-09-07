@@ -26,8 +26,7 @@ function MovieDetails() {
   }, [movieId]);
 
   const location = useLocation();
-  const backLink = useRef(location.state.from ?? "/");
-  console.log("MovieDetails >> location:::", location);
+  const backLink = useRef(location.state?.from ?? "/");
 
   return (
     <>

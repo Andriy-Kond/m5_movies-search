@@ -1,11 +1,5 @@
-// Your request for an API key has been approved. You can start using this key immediately.
-// API Key: 4bbdf91bf3cd1196a212f990d3c9214f
-
 import axios from "axios";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
-
-// Here's an example API request:
-// https://api.themoviedb.org/3/movie/550?api_key=4bbdf91bf3cd1196a212f990d3c9214f
 
 Notify.init({
   width: "300px",
@@ -18,7 +12,15 @@ Notify.init({
 const MAIN_POINT = "https://api.themoviedb.org/3";
 const API_KEY = "4bbdf91bf3cd1196a212f990d3c9214f";
 
-async function fetchMovies(currentRequestUrl) {
+async function fetchMovies(currentRequestUrl, searchParams) {
+  const params = {
+    api_key: API_KEY,
+    language: "en-US",
+    ...searchParams,
+  };
+
+  const stringParams = new URLSearchParams(params).toString(); // перетворення params у рядок з відповідними символами & і =
+
   // http запит
   const options = {
     method: "GET",
@@ -29,20 +31,13 @@ async function fetchMovies(currentRequestUrl) {
     },
   };
 
-  const params = {
-    api_key: API_KEY,
-    language: "en-US",
-  };
-
-  const stringParams = new URLSearchParams(params).toString(); // перетворення params у рядок з відповідними символами & і =
-
   const URL = `${MAIN_POINT}/${currentRequestUrl}?${stringParams}`;
-
   try {
     const receivedMovies = await axios.get(URL, options);
-
+    console.log("fetchMovies >> receivedMovies:::", receivedMovies);
     return receivedMovies;
   } catch (error) {
+    console.log("fetchMovies >> error:::", error);
     Notify.failure(error.message);
   }
 }
