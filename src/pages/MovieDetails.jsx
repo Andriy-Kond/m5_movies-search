@@ -10,7 +10,6 @@ import fetchMovies from "services/fetchMovies";
 
 function MovieDetails() {
   const { movieId } = useParams();
-
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {

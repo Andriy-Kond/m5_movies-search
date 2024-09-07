@@ -4,7 +4,7 @@ import { Notify } from "notiflix/build/notiflix-notify-aio";
 Notify.init({
   width: "300px",
   position: "right-bottom",
-  timeout: 2000,
+  // timeout: 2000,
   clickToClose: false,
   cssAnimationStyle: "from-right",
 });
@@ -34,10 +34,9 @@ async function fetchMovies(currentRequestUrl, searchParams) {
   const URL = `${MAIN_POINT}/${currentRequestUrl}?${stringParams}`;
   try {
     const receivedMovies = await axios.get(URL, options);
-    console.log("fetchMovies >> receivedMovies:::", receivedMovies);
+
     return receivedMovies;
   } catch (error) {
-    console.log("fetchMovies >> error:::", error);
     Notify.failure(error.message);
   }
 }

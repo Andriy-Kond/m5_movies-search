@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 
 function MoviesList({ list }) {
   const location = useLocation();
+  console.log("MoviesList >> location:::", location);
 
   return (
     <>
@@ -31,8 +32,8 @@ function MoviesList({ list }) {
               </p>
               <p>Language: {original_language}</p>
               <p>
-                Title:{" "}
-                <Link to={`movies/${id}`} state={{ from: location }}>
+                Title:
+                <Link to={`${id}`} state={{ from: location }}>
                   {original_title}
                 </Link>
               </p>
