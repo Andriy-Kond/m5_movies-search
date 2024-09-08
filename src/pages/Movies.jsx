@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 import fetchMovies from "services/fetchMovies";
 import MoviesList from "components/MoviesList";
+
+Notify.init({
+  width: "300px",
+  position: "right-bottom",
+  timeout: 2000,
+  clickToClose: false,
+  cssAnimationStyle: "from-right",
+});
 
 function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -23,7 +32,11 @@ function Movies() {
       setMovies(result.data.results);
     }
 
-    searchCurrentMovie();
+    try {
+      searchCurrentMovie();
+    } catch (error) {
+      Notify.failure(error.message);
+    }
   }, [searchParams, searchValue]);
 
   const filteredMovies = movies.filter(movie =>

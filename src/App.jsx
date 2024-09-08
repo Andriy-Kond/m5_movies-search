@@ -3,10 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import AppSharedLayout from "AppSharedLayout";
 import Home from "pages/Home";
 import Movies from "pages/Movies";
-import MovieDetails from "pages/MovieDetails";
-import Cast from "pages/Cast";
-import Reviews from "pages/Reviews";
 import NoтExistentPage from "pages/NoтExistentPage";
+
+import MovieDetails from "components/MovieDetails";
+import Cast from "components/Cast";
+import Reviews from "components/Reviews";
 
 function App() {
   return (
