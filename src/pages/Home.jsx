@@ -22,7 +22,7 @@ function Home() {
   return (
     <>
       <h1>Home</h1>
-      <MoviesList list={movies} />
+      {movies && <MoviesList list={movies} />}
     </>
   );
 }

@@ -11,6 +11,7 @@ function Movies() {
 
   useEffect(() => {
     if (!searchValue) {
+      setMovies([]);
       return;
     }
 
@@ -36,6 +37,8 @@ function Movies() {
       e.currentTarget.elements.movieSearch.value === ""
         ? {}
         : { query: e.currentTarget.elements.movieSearch.value };
+
+    e.currentTarget.reset();
 
     setSearchParams(searchString);
   };

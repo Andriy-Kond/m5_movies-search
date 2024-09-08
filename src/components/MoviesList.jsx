@@ -4,6 +4,8 @@ function MoviesList({ list }) {
   const location = useLocation();
   console.log("MoviesList >> location:::", location);
 
+  const linkTo = location.pathname.includes("movies") ? "" : "/movies/";
+
   return (
     <>
       <ul>
@@ -33,7 +35,7 @@ function MoviesList({ list }) {
               <p>Language: {original_language}</p>
               <p>
                 Title:
-                <Link to={`${id}`} state={{ from: location }}>
+                <Link to={`${linkTo}${id}`} state={{ from: location }}>
                   {original_title}
                 </Link>
               </p>
