@@ -12,7 +12,7 @@ Notify.init({
 const MAIN_POINT = "https://api.themoviedb.org/3";
 const API_KEY = "4bbdf91bf3cd1196a212f990d3c9214f";
 
-async function fetchMovies(currentRequestUrl, searchParams) {
+async function fetchMovies(currentRequestUrl, searchParams = "") {
   const params = {
     api_key: API_KEY,
     language: "en-US",

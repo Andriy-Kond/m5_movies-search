@@ -6,7 +6,10 @@ import {
   useLocation,
   useParams,
 } from "react-router-dom";
+
 import fetchMovies from "services/fetchMovies";
+import imagesConfigurations from "services/imagesConfigurations";
+import noPoster from "imgs/noPoster.webp";
 
 function MovieDetails() {
   const { movieId } = useParams();
@@ -27,18 +30,22 @@ function MovieDetails() {
   const location = useLocation();
   const backLink = useRef(location.state?.from ?? "/");
 
+  const { images } = imagesConfigurations;
+
+  const { homepage, original_title, backdrop_path, overview } = movie;
   return (
     <>
       <Link to={backLink.current}>Повернутись назад</Link>
       <h2>
-        <a href={movie.homepage}>{movie.original_title}</a>
+        <a href={homepage}>{original_title}</a>
       </h2>
       <img
-        src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-        alt={`Poster of ${movie.original_title} movie`}
+        src={`${images.secure_base_url}w500/${backdrop_path}`}
+        alt={`Poster of ${original_title} movie`}
+        width={500}
       />
       <p>
-        Overview: <span>{movie.overview}</span>
+        Overview: <span>{overview}</span>
       </p>
 
       <NavLink to={"cast"}>Cast</NavLink>

@@ -20,7 +20,7 @@ function App() {
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
-          <Route path="*" element={<NoтExistentPage />} />
+          <Route path=" 870ixu0*" element={<NoтExistentPage />} />
         </Route>
       </Routes>
     </>
