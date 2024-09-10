@@ -40,7 +40,11 @@ function MovieDetails() {
         <a href={homepage}>{original_title}</a>
       </h2>
       <img
-        src={`${images.secure_base_url}w500/${backdrop_path}`}
+        src={
+          backdrop_path
+            ? `${images.secure_base_url}w500/${backdrop_path}`
+            : noPoster
+        }
         alt={`Poster of ${original_title} movie`}
         width={500}
       />
