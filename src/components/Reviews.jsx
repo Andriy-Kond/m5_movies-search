@@ -25,16 +25,17 @@ function Reviews() {
 
   return (
     <>
-      <h2>Cast</h2>
+      <h2>Reviews</h2>
       <ul>
         {reviews.map(
           ({
+            id,
             author,
             content,
             created_at,
             author_details: { avatar_path, rating },
           }) => (
-            <li>
+            <li key={id}>
               <div>
                 <p>
                   <b>{author}</b> (rating: {rating})
@@ -64,7 +65,6 @@ function Reviews() {
           ),
         )}
       </ul>
-      <h2>Crew</h2>
     </>
   );
 }

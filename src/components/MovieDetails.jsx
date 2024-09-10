@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import {
   Link,
   NavLink,
@@ -55,7 +55,9 @@ function MovieDetails() {
       <NavLink to={"cast"}>Cast</NavLink>
       <NavLink to={"reviews"}>Reviews</NavLink>
 
-      <Outlet />
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </>
   );
 }

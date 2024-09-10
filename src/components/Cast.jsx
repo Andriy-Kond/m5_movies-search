@@ -28,8 +28,8 @@ function Cast() {
       <h2>Cast</h2>
       <ul>
         {cast.length > 0 ? (
-          cast.map(({ name, character, profile_path }) => (
-            <li>
+          cast.map(({ id, name, character, profile_path }) => (
+            <li key={id}>
               <img
                 src={
                   profile_path

@@ -1,4 +1,7 @@
+import { Suspense } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+
+import PreLoader from "components/Preloader";
 
 function AppSharedLayout() {
   return (
@@ -6,8 +9,9 @@ function AppSharedLayout() {
       <NavLink to={"/"}>Home</NavLink>
       <NavLink to={"/movies"}>Movies</NavLink>
 
-      {/* <NavLink to={"/movies/:movieId"}>Movie Name</NavLink> */}
-      <Outlet />
+      <Suspense fallback={<PreLoader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }

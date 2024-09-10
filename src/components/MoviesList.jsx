@@ -5,11 +5,9 @@ import noPoster from "imgs/noPoster.webp";
 
 function MoviesList({ list }) {
   const location = useLocation();
-  console.log("MoviesList >> location:::", location);
-
   const linkTo = location.pathname.includes("movies") ? "" : "/movies/";
-
   const { images } = imagesConfigurations;
+
   return (
     <>
       <ul>
