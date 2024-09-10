@@ -1,12 +1,26 @@
 {
   "files": {
-    "main.js": "/m5_movies-search/static/js/main.47491cdb.js",
+    "main.js": "/m5_movies-search/static/js/main.2fe22bd6.js",
+    "static/js/264.66a3080d.chunk.js": "/m5_movies-search/static/js/264.66a3080d.chunk.js",
+    "static/js/174.56ee0a95.chunk.js": "/m5_movies-search/static/js/174.56ee0a95.chunk.js",
+    "static/js/433.18778e6e.chunk.js": "/m5_movies-search/static/js/433.18778e6e.chunk.js",
+    "static/js/314.fb362659.chunk.js": "/m5_movies-search/static/js/314.fb362659.chunk.js",
+    "static/js/484.c1876991.chunk.js": "/m5_movies-search/static/js/484.c1876991.chunk.js",
+    "static/js/561.784f2e04.chunk.js": "/m5_movies-search/static/js/561.784f2e04.chunk.js",
+    "static/js/889.b6d4e6e0.chunk.js": "/m5_movies-search/static/js/889.b6d4e6e0.chunk.js",
     "static/media/noUser.jpg": "/m5_movies-search/static/media/noUser.b0a201d67273e87b9359.jpg",
     "static/media/noPoster.webp": "/m5_movies-search/static/media/noPoster.192b08c804259edd0d28.webp",
     "index.html": "/m5_movies-search/index.html",
-    "main.47491cdb.js.map": "/m5_movies-search/static/js/main.47491cdb.js.map"
+    "main.2fe22bd6.js.map": "/m5_movies-search/static/js/main.2fe22bd6.js.map",
+    "264.66a3080d.chunk.js.map": "/m5_movies-search/static/js/264.66a3080d.chunk.js.map",
+    "174.56ee0a95.chunk.js.map": "/m5_movies-search/static/js/174.56ee0a95.chunk.js.map",
+    "433.18778e6e.chunk.js.map": "/m5_movies-search/static/js/433.18778e6e.chunk.js.map",
+    "314.fb362659.chunk.js.map": "/m5_movies-search/static/js/314.fb362659.chunk.js.map",
+    "484.c1876991.chunk.js.map": "/m5_movies-search/static/js/484.c1876991.chunk.js.map",
+    "561.784f2e04.chunk.js.map": "/m5_movies-search/static/js/561.784f2e04.chunk.js.map",
+    "889.b6d4e6e0.chunk.js.map": "/m5_movies-search/static/js/889.b6d4e6e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.47491cdb.js"
+    "static/js/main.2fe22bd6.js"
   ]
 }
