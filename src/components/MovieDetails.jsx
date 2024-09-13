@@ -46,7 +46,7 @@ function MovieDetails() {
             : noPoster
         }
         alt={`Poster of ${original_title} movie`}
-        width={500}
+        height={500}
       />
       <p>
         Overview: <span>{overview}</span>

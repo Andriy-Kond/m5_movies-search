@@ -36,6 +36,7 @@ function MoviesList({ list }) {
                       : noPoster
                   }
                   alt={`Poster of ${original_title} movie`}
+                  height={500}
                 />
               </p>
               <p>Language: {original_language}</p>

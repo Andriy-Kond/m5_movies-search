@@ -3,13 +3,6 @@ import { lazy } from "react";
 
 import AppSharedLayout from "AppSharedLayout";
 
-// import Home from "pages/Home";
-// import Movies from "pages/Movies";
-// import MovieDetails from "components/MovieDetails";
-// import Cast from "components/Cast";
-// import Reviews from "components/Reviews";
-// import NoтExistentPage from "pages/NoтExistentPage";
-
 const Home = lazy(() => import("pages/Home"));
 const Movies = lazy(() => import("pages/Movies"));
 const MovieDetails = lazy(() => import("components/MovieDetails"));

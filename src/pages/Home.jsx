@@ -18,7 +18,7 @@ function Home() {
   useEffect(() => {
     // http запит за популярними фільмами
     async function fetchPopularMovies() {
-      const timeWindow = "day"; // "day" or "week"
+      const timeWindow = "week"; // "day" or "week"
       const currentRequestUrl = `trending/movie/${timeWindow}`;
 
       const result = await fetchMovies(currentRequestUrl);
